@@ -1,0 +1,38 @@
+version: '2'
+services:
+ hub:
+   image: selenium/hub:latest
+   container_name: hub
+   ports:
+     - "4444:4444"
+#   links:
+#     - "samsung_galaxy:butomo1989/docker-android-x86-8.1"
+#     - "nexus:butomo1989/docker-android-x86-8.1"
+# samsung_galaxy:
+#   image: butomo1989/docker-android-x86-8.1
+#   privileged: true
+#   depends_on:
+#     - hub
+#   ports:
+#     - "6080:6080"
+#   environment:
+#     - DEVICE=Samsung Galaxy S6
+#     - CONNECT_TO_GRID=True
+#     - APPIUM=true
+#     - SELENIUM_HOST=hub
+#     - MOBILE_WEB_TEST=False
+#     - AUTO_RECORD=True
+ nexus:
+   image: butomo1989/docker-android-x86-8.1
+   privileged: true
+   depends_on:
+     - hub
+   ports:
+     - "4723:4723"
+   environment:
+     - DEVICE=/dev/2b0c72d2a4221a38adfcd9f53efa4371061bdf09d6e3195198e14c6f7bf28520
+     - CONNECT_TO_GRID=True
+     - APPIUM=true
+     - SELENIUM_HOST=hub
+     - MOBILE_WEB_TEST=False
+     - AUTO_RECORD=True
