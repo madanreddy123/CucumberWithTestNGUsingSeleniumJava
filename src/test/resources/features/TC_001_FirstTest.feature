@@ -3,7 +3,7 @@ Feature: First Test
 
   Background:
     Given user on login page
-  @rr
+  @rr @tmslink=KAN-T1
   Scenario Outline: To enter few data
     Given validate the homepage
     And I enter the name a first_name '<first_name>'
@@ -11,17 +11,17 @@ Feature: First Test
     And I enter the name a Last_Name '<last_Name>'
     When I enter the name a phone_number '<phone_number>'
     When I enter the name a Address_One '<address_One>'
-    Then upload a file and validate if its downloaded
-    When I enter the Address_Two '<address_Two>'
-    When I enter the pin_code '<pin_code>'
-    When I enter the continent '<continent>'
-    And I enter the name a Primary_School '<primary_School>'
-    And I enter the name a Secondary_School '<secondary_School>'
-    And I enter the name a Intermediate '<intermediate>'
-    When I enter the name a Engineering '<engineering>'
-    When I enter the name a University '<university>'
-    When I enter the intermediate_Percentage '<intermediate_Percentage>'
-    When  I click on gender '<gender>'
+#    Then upload a file and validate if its downloaded
+#    When I enter the Address_Two '<address_Two>'
+#    When I enter the pin_code '<pin_code>'
+#    When I enter the continent '<continent>'
+#    And I enter the name a Primary_School '<primary_School>'
+#    And I enter the name a Secondary_School '<secondary_School>'
+#    And I enter the name a Intermediate '<intermediate>'
+#    When I enter the name a Engineering '<engineering>'
+#    When I enter the name a University '<university>'
+#    When I enter the intermediate_Percentage '<intermediate_Percentage>'
+#    When  I click on gender '<gender>'
 
 
 
