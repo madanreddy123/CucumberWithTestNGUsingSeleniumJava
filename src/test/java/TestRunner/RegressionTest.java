@@ -124,7 +124,7 @@ public class RegressionTest extends AbstractTestNGCucumberTests {
             RuntimeOptions runtimeOptions = RuntimeOptions.defaultOptions();
 
             List<Expression> tags = runtimeOptions.getTagExpressions();
-            String folderName = "./Reports_INIS/Reports_";
+            String folderName = "./Reports_/Reports_";
             if (tags.size()== 1) {
                 folderName = "./Reports_"+getUser+"/Reports_" + tags.get(0).toString().replace("@", "") + "_";
             }
